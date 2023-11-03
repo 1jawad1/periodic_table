@@ -1527,7 +1527,7 @@ let tableauPeriodique_1 = {
     },
     Ts: {
       "Nom": "Tennesse",
-      "Type": "Halogen",
+      "Type": "Halogène",
       "Température de fusion (°C)": "Inconnue",
       "Température d'ébullition (°C)": "Inconnue",
       "Année de découverte": 2010
@@ -1768,8 +1768,12 @@ window.addEventListener("resize", ()=>{
   if(document.querySelector(".element-block")){
     dinamyque_font(".element-block", ".element-content", 20); 
     dinamyque_font(".element-block", ".element-title", 10); 
-}
+  }
   dinamyque_font(".tableau", ".big-title", 25); 
+  dinamyque_font(".legende_container", ".legende", 20);
+  dinamyque_font(".info_bar", ".title_info_bar", 10); 
+  dinamyque_font(".row-element", ".row-element-content", 8); 
+
 
 })
 
@@ -1780,7 +1784,10 @@ window.addEventListener("load", ()=>{
   document.documentElement.style.setProperty("--periode-length",table.offsetWidth);
   dinamyque_font(".block", ".info", 5);
   dinamyque_font(".block", ".symbole", 3.5);
-  dinamyque_font(".tableau", ".big-title", 22); 
+  dinamyque_font(".tableau", ".big-title", 25); 
+  dinamyque_font(".legende_container", ".legende", 20); 
+  dinamyque_font(".info_bar", ".title_info_bar", 10); 
+  dinamyque_font(".row-element", ".row-element-content", 8); 
 
 })
 
@@ -1998,7 +2005,26 @@ blocks_list.forEach((block)=>{
 
 
 
+tries = document.querySelectorAll(".legende")
 
+tries.forEach(trie =>{
 
+  trie.addEventListener("click", ()=>{
 
+    blocks.forEach(block=>{
+      block.style.opacity = 1
+
+      if(!block.classList.contains(!trie.innerHTML.includes(" ")?trie.innerHTML:trie.innerHTML.split(" ")[1])){
+        block.style.opacity = 0.2
+      }
+    })
+  })
+
+})
+
+document.querySelector(".all_but").addEventListener("click",()=>{
+  blocks.forEach(block=>{
+    block.style.opacity =1
+  })
+})
 console.log()
