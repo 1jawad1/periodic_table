@@ -371,5 +371,17 @@ padding: 0px;
     margin: 5px;
     text-decoration: underline;
     cursor: pointer;
+    
 }
 
+.legende:hover, .all_but:hover{
+
+    transform: scale(1.2);
+
+}
+
+.legende:active, .all_but:active{
+
+    transform: scale(1);
+
+}
