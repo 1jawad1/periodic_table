@@ -356,9 +356,9 @@ padding: 0px;
     align-items: center;
     width: 35%;
     height: 28%;
-    color: #f4fffd;
+    color: #f4fffdaa;
     font-family: 'Edu TAS Beginner', cursive;
-    text-shadow: 0px 0px 2px #f4fffd;
+    text-shadow: 0px 0px 2px #f4fffdaa;
 }
 .legende{
     margin: 5px;
